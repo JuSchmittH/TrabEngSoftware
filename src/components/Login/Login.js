@@ -23,6 +23,7 @@ class Login extends Component {
 
     onSubmitForm = (event) => {
         event.preventDefault();
+        //-------FIXME: Verificar no banco de dados se é um login válido
     }
 
     render() {
