@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import { Login } from './components/Login'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
+import SignUp from './components/SignUp/SignUp';
 
 
 // function verifyLogin(nextState, replace) {
@@ -13,15 +15,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 //     }
 // }
 
-ReactDOM.render((
-    <App /> , (
-        <Router history={browserHistory}>
-            <Route path="/" component={App} />
-            {/* <Route path="/profile" component={Profile} onEnter={verifyLogin} />
-            <Route path="/gallery" component={SkirtsGallery} onEnter={verifyLogin} /> */}
-        </Router>
-    )),
-    document.getElementById("root")
+ReactDOM.render(
+    <BrowserRouter>
+        <Switch>
+            <Route path="/" exact={true} component={App} />
+            <Route path="/login" exact={true} component={Login} />
+            <Route path="/signup" exact={true} component={SignUp} />
+            {/* <Route path="*" exact={true} component={Error404Page} /> */}
+        </Switch>
+    </BrowserRouter>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

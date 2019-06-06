@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import logoNavbar from '../../assets/img/logoNavbar.png'
 import './Navbar.css'
 
 class Navbar extends Component {
     render() {
         return (
             <nav className="navbar">
-                <a className="navbar-brand navBrand ml-2" href="/">DellinhoGameplays</a>
+                <img src={logoNavbar} className="navbar-brand navBrand ml-2" href="/" alt="Logo"></img>
+                <div>
+                    <FontAwesomeIcon className="person-icon justify-content-end" icon={faUser} />
+                    <a className="homeLoginLink ml-2 mr-2" href="/login">Login</a>
+                </div>
             </nav>
         );
     }

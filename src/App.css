@@ -13,28 +13,16 @@
   margin: 5%
 }
 
-.homeWelcome {
-  font-family: 'News Cycle', sans-serif;
-  text-align: left;
-  padding-left: 3%; 
+.home-logo {
+  width: 60%;
 }
 
-.titleDellinho {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 300%;
-  text-align: left;
-}
-.titleGameplays {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 300%;
-  text-align: right;
+.home-link-login:hover, .home-link-signup:hover {
+  text-decoration: none;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-link-login, .home-link-signup {
+  color: white;
+  padding: 1% 2%;
 }

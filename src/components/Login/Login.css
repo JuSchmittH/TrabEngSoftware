@@ -1,0 +1,17 @@
+.login-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-phrase {
+    font-weight: bold;
+}
+
+.email-input, .password-input {
+    width: 400px !important;
+}
+
+.login-button {
+    float: right;
+}
