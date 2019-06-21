@@ -13,7 +13,12 @@ background-color: rgb(221, 221, 221);
     color: rgb(77, 77, 77); 
 }
 
-.homeLoginLink {
+.homeLoginLink, .createAdLink {
     color: black;
     font-weight: bold;
+}
+
+.createAdLink:hover, .homeLoginLink:hover {
+    text-decoration: none;
+    color: gray;
 }

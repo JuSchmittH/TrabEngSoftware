@@ -24,6 +24,8 @@ class Login extends Component {
     onSubmitForm = (event) => {
         event.preventDefault();
         //-------FIXME: Verificar no banco de dados se é um login válido
+        // const alertMessage = <p>Desculpe, ocorreu um erro. Tente novamente.</p>;
+        // ReactDOM.render(alertMessage, document.getElementById("warningMessage"));
     }
 
     render() {
@@ -32,16 +34,40 @@ class Login extends Component {
                 <Navbar />
                 <div className="container">
                     <div className="login-block">
-                        <img className="login-logo" src={homeLogo} alt="DellinhoGameplays Logo"></img>
+                        <img 
+                            className="login-logo"
+                            src={homeLogo}
+                            alt="DellinhoGameplays Logo">
+                        </img>
                         <form className="justify-content-center my-4">
                             <p className="login-phrase">Please, Log In!</p>
                             <div className="form-group">
-                                <input className="form-control email-input" type="email" placeholder="Enter email" value={this.state.loginName} onChange={this.onChangeEmail} aria-describedby="emailHelp"></input>
+                                <input 
+                                    className="form-control email-input"
+                                    type="email"
+                                    placeholder="Enter email"
+                                    value={this.state.loginName}
+                                    onChange={this.onChangeEmail}
+                                    aria-describedby="emailHelp">
+                                </input>
                             </div>
                             <div className="form-group">
-                                <input className="form-control password-input" type="password" placeholder="Enter password" value={this.state.loginPassword} onChange={this.onChangePassword} aria-label="Search"></input>
+                                <input
+                                    className="form-control password-input"
+                                    type="password"
+                                    placeholder="Enter password"
+                                    value={this.state.loginPassword}
+                                    onChange={this.onChangePassword}
+                                    aria-label="Search">
+                                </input>
                             </div>
-                            <button className="login-button btn-dark my-3 px-5 py-1 my-sm-0" onSubmit={this.onSubmitForm} type="submit">Login</button>
+                            <button
+                                className="login-button btn-dark my-3 px-5 py-1 my-sm-0"
+                                onSubmit={this.onSubmitForm}
+                                type="submit">
+                                    Login
+                                </button>
+                            <div className="warningMessage" id="warningMessage" />
                         </form>
                     </div>
                 </div>
